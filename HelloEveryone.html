@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    h1{
+    color: blue;
+    text-align: center;
+    text-shadow: 1px 1px;
+    }
+    .world{
+    color: white;
+    background-color:black;
+    }
+    h2{
+    background-image: linear-gradient(white, gold);
+    text-align:center;
+    font-variant: small-caps;
+    }
+    p {
+
+    border-color: green;
+    }
+    li{
+    font-weight: bold;
+    }
+</style>
+
+</head>
+<body>
+<h1>
+    Hello,
+    <span class="world">world!</span>
+</h1>
+<h2>Welcome to my new page, friends!</h2>
+
+<p id ="friends">
+
+</p>
+
+<script>
+
+var group, text, gLen, i;
+group = ["Ray-red-green-245","Oscar-orange-darkorchid-350","Gwen-green-powderblue-195","Bob-blue-gold-220", "Marie-magenta-bisque-160"];
+group.sort(() => Math.random() - 0.5);
+gLen = group.length;
+
+text = "<ul>";
+for (i = 0; i < gLen; i++) {
+  var temp = group[i].split("-");
+  text += "<li>" + "<span style='color:"+ temp[1]+ ";font-size:" + temp[3] +  "%;background-color:" + temp[2] +"'>" + temp[0] + "</span>" + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("friends").innerHTML = text;
+</script>
+</body>
+</html>
