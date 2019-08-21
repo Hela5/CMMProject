@@ -12,33 +12,35 @@
     background-color:black;
     }
     h2{
-    background-image: linear-gradient(white, gold);
     text-align:center;
+    font-size: 300%;
+    }
+    .welcome{
+    background-image: linear-gradient(white, gold);
+    font-family: Helvetica;
     font-variant: small-caps;
+    border-radius: 25px;
     }
     p {
-
     border-color: green;
     }
     li{
     font-weight: bold;
+    list-style-type: none;
     }
 </style>
-
 </head>
 <body>
 <h1>
-    Hello,
-    <span class="world">world!</span>
+    Hello, <span class="world">world!</span>
 </h1>
-<h2>Welcome to my new page, friends!</h2>
+<h2>
+    <span class="welcome">Welcome to my new page, friends!</span>
+</h2>
 
-<p id ="friends">
-
-</p>
+<p id ="friends"></p>
 
 <script>
-
 var group, text, gLen, i;
 group = ["Ray-red-green-245","Oscar-orange-darkorchid-350","Gwen-green-powderblue-195","Bob-blue-gold-220", "Marie-magenta-bisque-160"];
 group.sort(() => Math.random() - 0.5);
